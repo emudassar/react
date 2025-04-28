@@ -1,0 +1,12 @@
+h1 {
+  color: blue;
+}
+p {
+  color: purple;
+  padding: 5px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
