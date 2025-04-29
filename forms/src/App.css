@@ -1,0 +1,27 @@
+h1 {
+  color: blue;
+}
+p {
+  color: purple;
+  padding: 5px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+input {
+  margin: 10px auto;
+  padding-left: 10px;
+  width: 200px;
+  padding: 10px;
+}
+button {
+  margin: 10px auto;
+  margin-left: 5px;
+  padding: 10px;
+  background-color: lightgreen;
+  width: 100px;
+  color: black;
+}
