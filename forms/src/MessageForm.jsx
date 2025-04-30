@@ -11,7 +11,7 @@ const MessageForm = () => {
     }
 
   return (
-    <div>
+    <div className="container">
       <h1>Message Form</h1>
       <form onSubmit={handleSubmit}>
         <input type="text" value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Enter message"/>
