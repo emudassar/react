@@ -1,12 +1,12 @@
 
 import './App.css'
-import CounterLogger from './components/CounterLogger'
+import UserProfile from './components/UserProfile'
 
 function App() {
 
   return (
     <>
-      <CounterLogger />
+      <UserProfile />
     </>
   )
 }
