@@ -1,13 +1,12 @@
-import { useState } from 'react'
+
 import './App.css'
-import ToggleSwitch from './components/ToggleSwitch'
+import CounterLogger from './components/CounterLogger'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <ToggleSwitch />
+      <CounterLogger />
     </>
   )
 }
