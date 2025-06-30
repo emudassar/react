@@ -1,13 +1,11 @@
 
 import './App.css'
-import State from './components/State'
+import Timer from './components/Timer'
 
 function App() {
 
   return (
-    <div>
-      <State />
-    </div>
+    <Timer />
   )
 }
 
