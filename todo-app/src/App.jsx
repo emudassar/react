@@ -11,6 +11,10 @@ const App = () => {
     }
   };
 
+  const removeItem = (indexToRemove) => {
+    setTodos(todos.filter((_, index) => index !== indexToRemove))
+  }
+
   return (
     <div className="body">
       <div className="container">
@@ -21,10 +25,10 @@ const App = () => {
             value={input}
             onChange={(e) => setInput(e.target.value)}
           />
-          <button onClick={addTodo}>Add</button>
+          <button className="add-button" onClick={addTodo}>Add</button>
           <ul>
             {todos.map((todo, index) => (
-              <li key={index}>{todo}</li>
+              <li key={index}>{todo} <button className="delete-button" onClick={() => removeItem(index)}>Delete</button></li>
             ))}
           </ul>
         </div>
