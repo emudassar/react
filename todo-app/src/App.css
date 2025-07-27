@@ -1,98 +1,163 @@
 body {
-  background-color: #088a58;
+  background-color: #2b2e4a;
   color: #f8f8f8;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2b2e4a 0%, #1a1b2e 100%);
 }
 
 .container {
-  min-height: 60vh;
   width: 90%;
   max-width: 600px;
-  margin: 50px auto;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
   display: flex;
-  align-items: center;
   flex-direction: column;
-  gap: 20px;
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  border-radius: 15px;
+  align-items: center;
 }
 
 h1 {
   color: #ffffff;
-  margin-bottom: 20px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  font-weight: 600;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.input-field {
-  display: flex;
-  gap: 10px;
-  width: 100%;
-  justify-content: center;
-}
-
-input {
-  padding: 10px 20px;
-  border-radius: 25px;
-  border: 1px solid #ccc;
-  font-size: 16px;
+input[type="text"] {
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  background-color: #3a3f66;
+  color: #ffffff;
   outline: none;
   flex: 1;
+  transition: all 0.3s ease;
 }
 
-input:focus {
-  border-color: #0d6efd;
-  box-shadow: 0 0 5px rgba(13, 110, 253, 0.5);
+input[type="text"]::placeholder {
+  color: #a0a4cc;
+}
+
+input[type="text"]:focus {
+  background-color: #454a7a;
+  box-shadow: 0 0 8px rgba(13, 110, 253, 0.4);
 }
 
 .add-button {
-  padding: 10px 25px;
-  border-radius: 25px;
+  padding: 12px 30px;
+  border-radius: 30px;
   background-color: #0d6efd;
   color: white;
   border: none;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-left: 10px;
 }
 
-button:hover {
-  background-color: #084298;
+.add-button:hover {
+  background-color: #0a58ca;
+  transform: translateY(-2px);
 }
 
 ul {
-  color: white;
-  font-size: 18px;
-  list-style-type: disc;
-  padding-left: 20px;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 500px;
   margin-top: 20px;
 }
 
 li {
-  margin-bottom: 8px;
-}
-.delete-button{
-  margin-left: 20px;
-  padding: 5px 15px;
-  border-radius: 25px;
-  background-color: rgb(158, 33, 33);
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
   transition: background-color 0.3s ease;
 }
-li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
-  padding: 8px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
+
+.task-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.task-text {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.completed .task-text {
+  text-decoration: line-through;
+  color: #a0a4cc;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #0d6efd;
+}
+
+.delete-button {
+  padding: 8px 20px;
+  border-radius: 20px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
 .delete-button:hover {
-  background-color: rgb(200, 50, 50);
+  background-color: #b02a37;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  input[type="text"] {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+
+  .add-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .delete-button {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
 }
